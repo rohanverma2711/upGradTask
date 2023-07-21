@@ -84,32 +84,32 @@ const TableComponent = ({onRowClick}) =>{
           </div>
         </div>
 
-        <div class="flex flex-col ">
-          <div class="overflow-x-auto ">
-            <div class="inline-block min-w-full  ">
-              <div class="overflow-hidden ">
+        <div className="flex flex-col ">
+          <div className="overflow-x-auto ">
+            <div className="inline-block min-w-full  ">
+              <div className="overflow-hidden ">
                 <table
                   class="min-w-full text-left text-sm font-light "
                   ref={tableRef}
                 >
                   <thead class="border-b font-medium dark:border-neutral-500  ">
                     <tr>
-                      <th scope="col" class="px-6 py-4">
+                      <th scope="col" className="px-6 py-4">
                         S.No
                       </th>
-                      <th scope="col" class="px-6 py-4">
+                      <th scope="col" className="px-6 py-4">
                         Name
                       </th>
-                      <th scope="col" class="px-6 py-4">
+                      <th scope="col" className="px-6 py-4">
                         Email
                       </th>
-                      <th scope="col" class="px-6 py-4">
+                      <th scope="col" className="px-6 py-4">
                         Phone
                       </th>
-                      <th scope="col" class="px-6 py-4">
+                      <th scope="col" className="px-6 py-4">
                         Level
                       </th>
-                      <th scope="col" class="px-6 py-4">
+                      <th scope="col" className="px-6 py-4">
                         Profession
                       </th>
                     </tr>
