@@ -5,29 +5,22 @@ import { Resources } from "../Resources";
 
 const Resume = () => {
   const { id } = useParams();
-  console.log(id);
-
   function getMockDataById(id) {
     const parsedId = parseInt(id);
     return mockData.find((item) => item.id === parsedId);
   }
-
   const item = getMockDataById(id);
 
   function formatDate(inputDate) {
     const dateObject = new Date(inputDate);
-  
-    const formattedDate = new Intl.DateTimeFormat('en-US', {
-      month: 'short',
-      year: '2-digit'
+
+    const formattedDate = new Intl.DateTimeFormat("en-US", {
+      month: "short",
+      year: "2-digit",
     }).format(dateObject);
-  
+
     return formattedDate;
   }
-
-
-
-  
 
   return (
     <div className="bg-grey flex justify-center">
@@ -78,13 +71,8 @@ const Resume = () => {
 
             <div className="my-4 h-2 bg-gradient-to-r from-amber-800 via-amber-1600  to-amber-1700"></div>
 
-            <div className="flex text-xl font-bold text-black  ">
-              SUMMARY
-            </div>
-            <div className="flex text-start  text-darkGrey">
-              {item.summary}
-             
-            </div>
+            <div className="flex text-xl font-bold text-black  ">SUMMARY</div>
+            <div className="flex text-start  text-darkGrey">{item.summary}</div>
 
             <div className="my-4 h-2 bg-gradient-to-r from-amber-800 via-amber-1600  to-amber-1700"></div>
 
@@ -92,21 +80,19 @@ const Resume = () => {
               KEY SKILLS
             </div>
 
-            {item.skills.map((ro)=>(
-
-<div key={ro.id} className="text-start text-darkGrey">
-<div className="text-sm font-normal ">{ro.non_technical_skills}</div>
-</div>
+            {item.skills.map((ro) => (
+              <div key={ro.id} className="text-start text-darkGrey">
+                <div className="text-sm font-normal ">
+                  {ro.non_technical_skills}
+                </div>
+              </div>
             ))}
 
-
-
-           
             <div className="my-4 h-2 bg-gradient-to-r from-amber-800 via-amber-1600  to-amber-1700"></div>
 
             <div className="flex text-xl my-4 font-bold text-black  ">
               TECHNICAL SKILLS
-              </div>
+            </div>
 
             <div className="flex text-sm font-semibold text-black  ">
               Languages : {item.skills[0].technical_skills}
@@ -118,15 +104,12 @@ const Resume = () => {
                 <li>
                   Operating Systems :
                   <p className="text-darkGrey font-normal">
-                  {item.operating_system}
-                    
+                    {item.operating_system}
                   </p>
                 </li>
                 <li>
                   Databases :{" "}
-                  <p className="text-darkGrey font-normal">
-                    {item.databases}
-                  </p>
+                  <p className="text-darkGrey font-normal">{item.databases}</p>
                 </li>
               </ul>
             </div>
@@ -136,68 +119,45 @@ const Resume = () => {
               Professional Experience
             </div>
 
-            {item.work_experience.map((we)=>(
+            {item.work_experience.map((we) => (
+              <div key={we.id}>
+                <div className="flex flex-row justify-between">
+                  <div className="flex text-xl my-2 font-bold text-black  ">
+                    {we.job_title}
+                  </div>
 
+                  <div className="flex text-lg my-2 font-normal text-black  ">
+                    {`${formatDate(we.work_start_date)} - ${formatDate(
+                      we.work_end_date,
+                    )}`}
+                  </div>
+                </div>
 
-<div key={we.id}>
+                <div className="flex flex-row justify-between">
+                  <div className="flex text-xl my-2 font-bold text-black  ">
+                    {we.company_name}
+                  </div>
 
-           
+                  <div className="flex text-lg my-2 font-normal text-black  ">
+                    {we.company_location}
+                  </div>
+                </div>
 
+                <div>
+                  <p className="text-start text-sm italic font-normal text-darkGrey ">
+                    {we.Description}
+                  </p>
+                </div>
 
-
-<div className="flex flex-row justify-between">
-
-<div className="flex text-xl my-2 font-bold text-black  ">
-  {we.job_title}
-</div>
-
-<div className="flex text-lg my-2 font-normal text-black  ">
-                {`${formatDate(we.work_start_date)} - ${formatDate(we.work_end_date)}`}
+                <div className=" text-start">
+                  <ul className="ml-6 list-disc text-base italic font-normal text-darkGrey ">
+                    {we.contribution.map((de) => (
+                      <li key={de.id}>{de.contri1}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-</div>
-
-<div className="flex flex-row justify-between">
-
-<div className="flex text-xl my-2 font-bold text-black  ">
-  {we.company_name}
-</div>
-
-<div className="flex text-lg my-2 font-normal text-black  ">
-    {we.company_location}
-</div>
-</div>
-
-
-
-<div>
-
-  <p className="text-start text-sm italic font-normal text-darkGrey ">
-    {we.Description}
-  </p>
-</div>
-
-<div className=" text-start">
-  <ul className="ml-6 list-disc text-base italic font-normal text-darkGrey ">
-
-    {we.contribution.map((de)=>(
-        <li key ={de.id}>
-        {de.contri1}
-            
-          </li>
-
-
-
-    ))}
-  
-   
-   
-  </ul>
-</div>
-</div>
             ))}
-
-
-          
 
             <div className="my-4  h-2 bg-gradient-to-r from-amber-800 via-amber-1600  to-amber-1700"></div>
 
@@ -205,116 +165,86 @@ const Resume = () => {
               INTERNSHIPS
             </div>
 
+            {item.internships.map((int) => (
+              <div key={int.id}>
+                <div className="flex flex-row justify-between">
+                  <div className="flex text-xl my-2 font-bold text-black  ">
+                    {int.designation}
+                  </div>
 
-            {item.internships.map((int)=>(
+                  <div className="flex text-lg my-2 font-normal text-black  ">
+                    {`${formatDate(int.intern_start_date)} - ${formatDate(
+                      int.intern_end_date,
+                    )}`}
+                  </div>
+                </div>
 
-              <div key = {int.id}>
-              <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between">
+                  <div className="flex text-lg my-2 font-bold text-black  ">
+                    {int.company_name}
+                  </div>
 
-            <div className="flex text-xl my-2 font-bold text-black  ">
-              {int.designation}
-            </div>
+                  <div className="flex text-lg my-2 font-normal text-black  ">
+                    {int.company_location}
+                  </div>
+                </div>
 
-            <div className="flex text-lg my-2 font-normal text-black  ">
-                {`${formatDate(int.intern_start_date)} - ${formatDate(int.intern_end_date)}`}
+                <div>
+                  <p className="text-start text-sm italic font-normal  text-darkGrey ">
+                    {int.summary}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            <div className="flex flex-row justify-between">
-
-            <div className="flex text-lg my-2 font-bold text-black  ">
-              {int.company_name}
-            </div>
-
-            <div className="flex text-lg my-2 font-normal text-black  ">
-                {int.company_location}
-            </div>
-            </div>
-
-
-
-            <div>
-
-              <p className="text-start text-sm italic font-normal  text-darkGrey ">
-                {int.summary}
-               </p>
-            </div>
-              
-              </div>
-
-              
             ))}
-
-            
 
             <div className="my-4 h-2 bg-gradient-to-r from-amber-800 via-amber-1600  to-amber-1700"></div>
             <div className="flex text-xl my-3 font-bold text-black  ">
               EDUCATION
             </div>
 
-           {
-            item.education.map((ed)=>(
+            {item.education.map((ed) => (
               <div key={ed.id}>
+                <div className="flex flex-row justify-between">
+                  <div className="flex text-xl my-2 font-bold text-black  ">
+                    {ed.degree}
+                  </div>
 
-           
+                  <div className="flex text-lg my-2 font-normal text-black  ">
+                    {`${formatDate(ed.degree_start_date)} - ${formatDate(
+                      ed.degree_end_date,
+                    )}`}
+                  </div>
+                </div>
 
+                <div className="flex flex-row justify-between">
+                  <div className="flex text-lg my-2 font-bold text-black  ">
+                    {ed.school_name}
+                  </div>
 
+                  <div className="flex text-lg my-2 font-normal text-black  ">
+                    {ed.school_location}
+                  </div>
+                </div>
 
-              <div className="flex flex-row justify-between">
-  
-              <div className="flex text-xl my-2 font-bold text-black  ">
-                {ed.degree}
-              </div>
-  
-              <div className="flex text-lg my-2 font-normal text-black  ">
-                {`${formatDate(ed.degree_start_date)} - ${formatDate(ed.degree_end_date)}`}
-              </div>
-              </div>
-  
-              <div className="flex flex-row justify-between">
-  
-              <div className="flex text-lg my-2 font-bold text-black  ">
-                {ed.school_name}
-              </div>
-  
-              <div className="flex text-lg my-2 font-normal text-black  ">
-                  {ed.school_location}
-              </div>
-              </div>
-  
-  
-  
-              <div>
-  
-                <p className="text-start text-sm italic font-normal  text-darkGrey ">
-                {ed.summary}
-                </p>
-              </div>
-  
-              <div className=" text-start">
-                <ul className="ml-6 list-disc text-base italic font-normal text-darkGrey ">
-                  <li>
-{ed.gpa}
-                    
-                  </li>
-                  <li>
-                 {ed.course_modules}  
-                  </li>
-                 
-                 
-                </ul>
-              </div>
-              </div>
+                <div>
+                  <p className="text-start text-sm italic font-normal  text-darkGrey ">
+                    {ed.summary}
+                  </p>
+                </div>
 
-            ))
-           }
+                <div className=" text-start">
+                  <ul className="ml-6 list-disc text-base italic font-normal text-darkGrey ">
+                    <li>{ed.gpa}</li>
+                    <li>{ed.course_modules}</li>
+                  </ul>
+                </div>
+              </div>
+            ))}
 
             <div className="my-4 h-2 bg-gradient-to-r from-amber-800 via-amber-1600  to-amber-1700 "></div>
-            
-            </div>
           </div>
         </div>
-      
+      </div>
     </div>
   );
 };
