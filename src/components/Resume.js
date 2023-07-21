@@ -94,8 +94,8 @@ const Resume = () => {
               TECHNICAL SKILLS
             </div>
 
-            <div className="flex text-sm font-semibold text-black  ">
-              Languages : {item.skills[0].technical_skills}
+            <div className=" my-2 text-start text-sm font-semibold text-black  ">
+              Languages : <p className="text-darkGrey font-normal">{item.skills[0].technical_skills}</p>
             </div>
 
             <div className="flex  "></div>

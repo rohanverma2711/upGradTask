@@ -89,10 +89,10 @@ const TableComponent = ({onRowClick}) =>{
             <div className="inline-block min-w-full  ">
               <div className="overflow-hidden ">
                 <table
-                  class="min-w-full text-left text-sm font-light "
+                  className="min-w-full text-left text-sm font-light "
                   ref={tableRef}
                 >
-                  <thead class="border-b font-medium dark:border-neutral-500  ">
+                  <thead className="border-b font-medium dark:border-neutral-500  ">
                     <tr>
                       <th scope="col" className="px-6 py-4">
                         S.No
@@ -120,30 +120,30 @@ const TableComponent = ({onRowClick}) =>{
                         ) => (
                         <tr
                           key={data.id}
-                          class="border-b cursor-pointer transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 bg-white"
+                          className="border-b cursor-pointer transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 bg-white"
                          onClick={()=>{onRowClick(data.id);navigate("/resume/" + `${data.id}`)
                           ;
 
                         }}
                         >
-                          <td class="whitespace-nowrap px-6 py-4 font-medium"
+                          <td className="whitespace-nowrap px-6 py-4 font-medium"
                          >
                             {data.id}
                             
                           </td>
-                          <td class="whitespace-nowrap px-6 py-4">
+                          <td className="whitespace-nowrap px-6 py-4">
                             {data.first_name}
                           </td>
-                          <td class="whitespace-nowrap px-6 py-4">
+                          <td className="whitespace-nowrap px-6 py-4">
                             {data.email}
                           </td>
-                          <td class="whitespace-nowrap px-6 py-4">
+                          <td className="whitespace-nowrap px-6 py-4">
                             {data.phone_number}
                           </td>
-                          <td class="whitespace-nowrap px-6 py-4">
+                          <td className="whitespace-nowrap px-6 py-4">
                             {data.level}
                           </td>
-                          <td class="whitespace-nowrap px-6 py-4">
+                          <td className="whitespace-nowrap px-6 py-4">
                             {data.profession}
                           </td>
                           

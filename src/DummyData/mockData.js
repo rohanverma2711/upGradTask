@@ -18,7 +18,7 @@ export const mockData = [
                 linkedin: "linkedin.com/nainu",
                 portfolio_link: "portfolio_link",
                 languages: "english,hindi",
-                summary: "Hello i am Nainu Wadhwa",
+                summary: "Hello i am Nainu Wadhwa. A Energetic Computer Science Student looking to pursue a job opportunity in a competitive environment.",
                 accomplishment: "dbejdbwkdbkwbdkwbdw",
                 operating_system:"Windows,Linux",
                 databases:"MySQL,MongoDb",
@@ -124,7 +124,7 @@ export const mockData = [
                   {
                   skills_id:1,
                     non_technical_skills: "Market Research",
-                    technical_skills: "java,python",
+                    technical_skills: "java,python,C++,Perl,Javascript",
                   },
                   {
                     skills_id:2,
@@ -143,9 +143,30 @@ export const mockData = [
                         },
                         {
                           skills_id:5,
-                            non_technical_skills: "Blog Writing",
+                            non_technical_skills: "Blogs",
                             technical_skills: "java,python",
                           },
+                          {
+                            skills_id:6,
+                              non_technical_skills: "Content Creator",
+                              technical_skills: "java,python",
+                            },
+                            {
+                              skills_id:7,
+                                non_technical_skills: "Blog Writing",
+                                technical_skills: "java,python",
+                              },
+                              {
+                                skills_id:8,
+                                  non_technical_skills: "Marketing",
+                                  technical_skills: "java,python",
+                                },
+                                
+                                {
+                                  skills_id:9,
+                                    non_technical_skills: "Vlogs",
+                                    technical_skills: "java,python",
+                                  },
                 ],
                  
                 certificates: [
