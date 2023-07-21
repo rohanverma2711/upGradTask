@@ -120,7 +120,7 @@ const TableComponent = ({onRowClick}) =>{
                         ) => (
                         <tr
                           key={data.id}
-                          class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 bg-white"
+                          class="border-b cursor-pointer transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600 bg-white"
                          onClick={()=>{onRowClick(data.id);navigate("/resume/" + `${data.id}`)
                           ;
 

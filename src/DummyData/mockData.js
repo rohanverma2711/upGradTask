@@ -25,27 +25,27 @@ export const mockData = [
                 education: [
                   {
                   education_id:1,
-                    school_name: "School 1",
+                    school_name: "CUET",
                     school_location: "Chandigarh",
                     degree: "B.Tech",
                     field_of_study: "CSE",
                     degree_start_date: "2022-12-09",
                     degree_end_date: "2022-12-09",
                     current_attend_here: 0,
-                    summary:"This is a summary",
+                    summary:"This is a summary for this part",
                     gpa:3.84,
                     course_modules:"Java,Networking,System Design"
                   },
                   {
                     education_id:2,
-                      school_name: "School 1",
-                      school_location: "Chandigarh",
+                      school_name: "DU",
+                      school_location: "Delhi",
                       degree: "B.Tech",
                       field_of_study: "CSE",
                       degree_start_date: "2022-12-09",
                       degree_end_date: "2022-12-09",
                       current_attend_here: 0,
-                      summary:"This is a summary",
+                      summary:"This is a summary for this part",
                       gpa:3.84,
                       course_modules:"Java,Networking,System Design"
                     },
@@ -59,7 +59,7 @@ export const mockData = [
                     company_location: "Delhi",
                     work_start_date: "2022-12-09",
                     work_end_date: "2022-12-09",
-                    Description: "Description",
+                    Description: "Learned a lot of new things",
                     currently_work_here: 0,
                     contribution:[
 
@@ -85,7 +85,7 @@ export const mockData = [
                          company_location: "Delhi",
                          work_start_date: "2022-12-09",
                     work_end_date: "2022-12-09",
-                         Description: "Description",
+                         Description: "Learned a lot of new things",
                          currently_work_here: 0,
                          contribution:[
      
@@ -193,7 +193,7 @@ export const mockData = [
                         level: "internship",
                         profession: "Designer",
                         email: "rohan@gmail.com",
-                        phone_number: "861728",
+                        phone_number: "897986252",
                         city: "Delhi",
                         country: "India",
                         pincode: "124001",
@@ -216,7 +216,7 @@ export const mockData = [
                             degree_start_date: "2022-12-09",
                             degree_end_date: "2022-12-09",
                             current_attend_here: 0,
-                            summary:"This is a summary",
+                            summary:"This is a summary for this part",
                             gpa:3.84,
                             course_modules:"Java,Networking,System Design"
                           },
@@ -229,7 +229,7 @@ export const mockData = [
                               degree_start_date: "2022-12-09",
                               degree_end_date: "2022-12-09",
                               current_attend_here: 0,
-                              summary:"This is a summary",
+                              summary:"This is a summary for this part",
                               gpa:3.84,
                               course_modules:"Java,Networking,System Design"
                             },
@@ -243,7 +243,7 @@ export const mockData = [
                             company_location: "Delhi",
                             work_start_date: "2022-12-09",
                             work_end_date: "2022-12-09",
-                            Description: "Description",
+                            Description: "Learned a lot of new things",
                             currently_work_here: 0,
                             contribution:[
         
@@ -269,7 +269,7 @@ export const mockData = [
                                  company_location: "Delhi",
                                  work_start_date: "2022-12-09",
                             work_end_date: "2022-12-09",
-                                 Description: "Description",
+                                 Description: "Learned a lot of new things",
                                  currently_work_here: 0,
                                  contribution:[
              
