@@ -1,6 +1,6 @@
 # UPGRAD TASK 
 
-This project is build for Upgrad.
+This project is build for Upgrad.This contains the Table with Data from the mock data and on each Click on the row we get the Resume for that particular User.
 
 
 ## Available Scripts
